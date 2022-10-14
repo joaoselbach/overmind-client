@@ -10,7 +10,7 @@
   --placeholder: #383838;
   --body-bg: #070912;
   --form-bg: #0000006e;
-  --form-bg-blur: blur(5px);
+  --bg-blur: blur(3px);
   --form-border: #121212;
   --input: #0a0b14;
   --input-icons: #d5d5d5;
@@ -47,7 +47,7 @@
   --description: #090909;
   --body-bg: #f9f9f9;
   --form-bg: #e5e5e57a;
-  --form-bg-blur: blur(3px);
+  --bg-blur: blur(2px);
   --form-border: #e1e1e1;
   --input: #dbdbdb;
   --placeholder: #a1a1a1;
@@ -135,6 +135,7 @@ button {
   width: 100%;
   position: fixed;
   background-color: var(--form-bg);
+  backdrop-filter: var(--bg-blur);
   z-index: 5;
 }
 
@@ -210,7 +211,7 @@ button {
   border: 1px solid var(--form-border);
   border-radius: 1rem;
   background-color: var(--form-bg);
-  backdrop-filter: var(--form-bg-blur);
+  backdrop-filter: var(--bg-blur);
 }
 
 .form-control span {

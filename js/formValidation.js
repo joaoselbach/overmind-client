@@ -8,29 +8,29 @@ let error = 0;
 
 function handleEmail() {
 
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        phone: document.getElementById('phone').value,
-        password: document.getElementById('password').value,
-        repassword: document.getElementById('repassword').value
-    }
+    const name = document.getElementById('name').value,
+        email = document.getElementById('email').value,
+        phone = document.getElementById('phone').value,
+        password = document.getElementById('password').value,
+        repassword = document.getElementById('repassword').value
 
     //Send the e-mail using SMTPJS and Elasticmail
     Email.send({
         SecureToken: "0a0b050b-d1ff-4c0e-940c-d127c94157ae",
         To: 'joao.selbach@hotmail.com',
         From: "joao.selbach@meisters.solutions",
-        Subject: `${formData.name} - Projeto formulário`,
-        Body: JSON.stringify(formData)
+        Subject: `${name} - Overmind`,
+        Body: `<h3> Novo usuário cadastrado! </h3> <br /> Nome: <strong>${name}</strong> <br />
+         Email: <strong>${email}</strong> <br /> Telefone: <strong>${phone}</strong> <br />
+          Senha: <strong>${password}</strong> <br /> Confirmação de senha: <strong>${repassword}</strong> `
     }).then((message) => {
         if (message === "OK") {
             openModal()
-            document.getElementById('name').value = ""
-            document.getElementById('email').value = ""
-            document.getElementById('phone').value = ""
-            document.getElementById('password').value = ""
-            document.getElementById('repassword').value = ""
+            name = ""
+            email = ""
+            phone = ""
+            password = ""
+            repassword = ""
         } else {
             console.log(message)
         }
