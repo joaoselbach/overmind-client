@@ -1,5 +1,6 @@
 /*============== Dark mode ============== */
 :root {
+
   /*============== Max width ============== */
   --max-width: 1060px;
 
@@ -38,11 +39,11 @@
 
 /*============== Light mode ============== */
 .light-mode:root {
+
   /*============== Max width ============== */
   --max-width: 1060px;
 
   /*============== Colors ============== */
-
   --blue: #40aac7;
   --text: #2e2e2e;
   --description: #090909;
@@ -231,11 +232,10 @@ button {
   border: none;
   border-bottom: 2px solid #8787873b;
   padding: 1.3rem 2.5rem;
-  background-color: transparent;
-  color: var(--button);
   font-size: 0.9rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
+  color: var(--button);
+  background-color: transparent;
 
   transition: 0.2s all ease;
 }
@@ -303,6 +303,7 @@ button {
 
 .fa-heart {
   color: var(--icons);
+
   transition: 0.2s all ease;
 }
 
@@ -321,6 +322,7 @@ button {
 .fa-social-media {
   color: var(--icons);
   font-size: 1.5rem;
+
   transition: 0.3s all ease;
 }
 
@@ -375,8 +377,8 @@ button {
   right: 0;
   bottom: 0;
   background-color: var(--switch-bg);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;;
 }
 
 .slider:before {
@@ -387,8 +389,9 @@ button {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+
+  -webkit-transition: 0.4s all ease;;
+  transition: 0.4s all ease;;
 }
 
 input:checked + .slider:before {
@@ -441,8 +444,8 @@ input:checked + .slider:before {
   display: grid;
   place-items: center;
   opacity: 0;
-  pointer-events: none;
 
+  pointer-events: none;
   transition: opacity 0.15s;
 }
 
@@ -503,15 +506,8 @@ input:checked + .slider:before {
 
 /*============== Responsive Breakpoints ============== */
 
-/*============== Tablet ============== */
-
 @media (max-width: 768px) {
   .form {
     padding: 3.5rem 2rem;
   }
-}
-
-/*============== Mobile ============== */
-
-@media (max-width: 460px) {
 }
