@@ -4,11 +4,8 @@ const open = getElement('.open-modal-button');
 const close = getElement('.modal-btn')
 const container = getElement('.modal-container');
 const modal = getElement('.modal');
-
-const activeModalClass = 'modal-show';
-
-
 const play = document.getElementById('btn-lottie');
+const activeModalClass = 'modal-show';
 
 const svgContainer = document.getElementById('svg');
 const animItem = bodymovin.loadAnimation({
