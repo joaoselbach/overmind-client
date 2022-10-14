@@ -9,7 +9,7 @@ let error = 0;
 function handleEmail() {
 
     const formData = {
-        username: document.getElementById('name').value,
+        name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('phone').value,
         password: document.getElementById('password').value,
