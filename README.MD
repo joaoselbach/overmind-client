@@ -11,12 +11,6 @@
  <img src=".github/mockup.png" alt="Mockup desktop and mobile" />
 </p>
 
-<br>
-
-<p align="center">
-  <img alt="Overmind" src=".github/logo.png" width="100%">
-</p>
-
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
