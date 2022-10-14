@@ -26,7 +26,11 @@ function handleEmail() {
     }).then((message) => {
         if (message === "OK") {
             openModal()
-            console.log(message)
+            document.getElementById('name').value = ""
+            document.getElementById('email').value = ""
+            document.getElementById('phone').value = ""
+            document.getElementById('password').value = ""
+            document.getElementById('repassword').value = ""
         } else {
             console.log(message)
         }
@@ -90,7 +94,7 @@ function phoneValidate() {
 }
 
 function passwordValidate() {
-    if (inputs[3].value.length < 8) {
+    if (inputs[3].value.length < 6) {
         setError(3);
     }
     else {
