@@ -17,12 +17,13 @@ function handleEmail() {
     //Send the e-mail using SMTPJS and Elasticmail
     Email.send({
         SecureToken: "0a0b050b-d1ff-4c0e-940c-d127c94157ae",
-        To: 'joao.selbach@hotmail.com',
+        To: 'contato@overmind.ai',
         From: "joao.selbach@meisters.solutions",
         Subject: `${name} - Overmind`,
         Body: `<h3> Novo usuário cadastrado! </h3> <br /> Nome: <strong>${name}</strong> <br />
          Email: <strong>${email}</strong> <br /> Telefone: <strong>${phone}</strong> <br />
-          Senha: <strong>${password}</strong> <br /> Confirmação de senha: <strong>${repassword}</strong> `
+          Senha: <strong>${password}</strong> <br /> Confirmação de senha: <strong>${repassword}</strong> 
+          `
     }).then((message) => {
         if (message === "OK") {
             openModal()
