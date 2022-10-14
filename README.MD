@@ -26,5 +26,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Após o submit todos os dados preenchidos no formulário serão enviados para o email colocado no SMTP
 - Dark/Light mode
 - Background animado com interação hover/click
+- Animação Lottie (Necessário rodar em live server para funcionar)
 
 
