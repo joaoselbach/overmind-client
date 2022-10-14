@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Overmind" title="Overmind" src=".github/logo.png" />
+    <img alt="Overmind" title="Overmind" src=".github/logo-sm.png" />
 </h1>
 
 <p align="center">
@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
- <img src=".github/mockup.png" alt="Mockup desktop and mobile" />
+ <img src=".github/mock.png" alt="Mockup desktop and mobile" />
 </p>
 
 ## 🚀 Tecnologias
