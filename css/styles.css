@@ -503,6 +503,11 @@ input:checked + .slider:before {
 /*============== Responsive Breakpoints ============== */
 
 @media (max-width: 768px) {
+  .main-container {
+    padding: 3rem 0 4.5rem 0;
+    height: 100%;
+  }
+
   .form {
     padding: 3.5rem 2rem;
   }
