@@ -27,11 +27,11 @@ function handleEmail() {
     }).then((message) => {
         if (message === "OK") {
             openModal()
-            name = ""
-            email = ""
-            phone = ""
-            password = ""
-            repassword = ""
+            document.getElementById('name').value = '',
+            document.getElementById('email').value = '',
+            document.getElementById('phone').value = '',
+            document.getElementById('password').value = '',
+            document.getElementById('repassword').value = ''
         } else {
             console.log(message)
         }
