@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/icons/css/all.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/public/favicon.ico">
+    <title>Overmind</title>
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <!--==================== Header ====================-->
+    <header class="header-container">
+        <div class="header-content">
+            <a href="https://overmind.ai/" target="_blank">
+                <img src="assets/logo.png" />
+            </a>
+            <div class="header-icons">
+                <label class="switch">
+                    <input type="checkbox" id="switch">
+                    <span class="slider round"></span>
+                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-sun"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!--==================== Home ====================-->
+    <main>
+        <!--==================== Form  ====================-->
+        <div class="main-container">
+            <section class="form-container">
+                <form id="form" class="form" method="POST">
+                    <div class="form-control">
+                        <div class="input-container">
+                            <input id="name" name="name" class="form-input required" type="text" placeholder="Nome"
+                                oninput="nameValidate()" required />
+                            <i class="fa-solid fa-user fa-input"></i>
+                        </div>
+                        <span class="span-required">Nome deve ter no mínimo 3 caracteres</span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="input-container">
+                            <input id="email" name="email" class="form-input required" type="email" required
+                                placeholder="Email" oninput="emailValidate()" />
+                            <i class="fa-solid fa-envelope fa-input"></i>
+                        </div>
+                        <span class="span-required">Digite um email válido</span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="input-container">
+                            <input id="phone" name="phone" class="form-input required" type="phone" required
+                                placeholder="Telefone" oninput="phoneValidate()" />
+                            <i class="fa-solid fa-phone fa-input"></i>
+                        </div>
+                        <span class="span-required">Digite um celular valido</span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="input-container">
+                            <input id="password" name="password" class="form-input required" type="password" required
+                                placeholder="Sua senha" oninput="passwordValidate()" />
+                            <i class="fa-solid fa-lock fa-input"></i>
+                        </div>
+                        <span class="span-required">Digite uma senha com no mínimo 6 caracteres</span>
+                    </div>
+
+                    <div class="form-control">
+                        <div class="input-container">
+                            <input id="repassword" name="repassword" class="form-input required" type="password"
+                                required placeholder="Confirme sua senha" oninput="rePasswordValidate()" />
+                            <i class="fa-solid fa-lock fa-input"></i>
+                        </div>
+                        <span class="span-required">Senha não é compativel</span>
+                    </div>
+
+                    <button type="submit" class="form-btn">Enviar</button>
+                </form>
+            </section>
+
+            <!--==================== Success/Error Modal ====================-->
+            <div class="modal-container">
+                <div class="modal">
+                    <div class="lottie-success" id="svg"></div>
+                    <h1>Sucesso!</h1>
+                    <p>Seus dados foram enviados com sucesso</p>
+                    <button class="modal-btn">Fechar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--==================== Footer ====================-->
+        <footer class="footer-content">
+
+        </footer>
+    </main>
+
+    <!--==================== Particles ====================-->
+    <script src="js/particles.js"></script>
+    <script src="js/particles-config.js"></script>
+
+    <!--==================== Lottie animation ====================-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.9.6/lottie.min.js"
+        integrity="sha512-yAr4fN9WZH6hESbOwoFZGtSgOP+LSZbs/JeoDr02pOX4yUFfI++qC9YwIQXIGffhnzliykJtdWTV/v3PxSz8aw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--==================== Form validation / Send e-mail ====================-->
+    <script src="js/formValidation.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <!--==================== Dark/Light mode ====================-->
+    <script src="js/toggleTheme.js"></script>
+
+    <!--==================== Modal ====================-->
+    <script src="js/modal.js"></script>
+</body>
+
+</html>

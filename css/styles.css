@@ -1,0 +1,499 @@
+/*============== Dark mode ============== */
+:root {
+
+  /*============== Max width ============== */
+  --max-width: 1060px;
+
+  /*============== Colors ============== */
+  --blue: #40aac7;
+  --text: #fff;
+  --description: #9b9b9b;
+  --placeholder: #383838;
+  --body-bg: #070912;
+  --form-bg: #0000006e;
+  --form-bg-blur: blur(5px);
+  --form-border: #121212;
+  --input: #0a0b14;
+  --input-icons: #d5d5d5;
+  --button-disabled: #b3b9bb;
+  --icons: #b7b4b4;
+  --icons-hover: #fff;
+  --switch-bg: #24242491;
+  --switch-round: #040404;
+  --scrollbar-bg: #2b2b2b;
+  --input-error: #e63636;
+  --modal-bg: #0c0d12;
+  --modal-btn: #2e2e2e;
+
+  /*============== Typography ============== */
+  --body-font: "Rajdhani", sans-serif;
+  --header-light-font: 0.85rem;
+
+  /*============== Font Weight ============== */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  --black: 900;
+}
+
+/*============== Light mode ============== */
+.light-mode:root {
+
+  /*============== Max width ============== */
+  --max-width: 1060px;
+
+  /*============== Colors ============== */
+
+  --blue: #40aac7;
+  --text: #2e2e2e;
+  --description: #090909;
+  --body-bg: #f9f9f9;
+  --form-bg: #e5e5e57a;
+  --form-bg-blur: blur(3px);
+  --form-border: #e1e1e1;
+  --input: #dbdbdb;
+  --placeholder: #a1a1a1;
+  --input-icons: #484848;
+  --button-disabled: #b3b9bb;
+  --switch-icons: #dfdfdf;
+  --icons: #2e2e2e;
+  --icons-hover: #141414;
+  --logo-black: brightness(0.2);
+  --switch-bg: #00000070;
+  --switch-round: #000000;
+  --scrollbar-bg: #c3c3c3;
+  --input-error: #e63636;
+  --modal-bg: #f9f9f9;
+  --modal-btn: #2e2e2e;
+  --invert-color-particles: invert(1);
+
+  /*============== Typography ============== */
+  --body-font: "Rajdhani", sans-serif;
+  --header-light-font: 0.85rem;
+
+  /*============== Font Weight ============== */
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
+  --black: 900;
+}
+
+/*============== Base Config ============== */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*  Default Font size: 16px Desktop  */
+html {
+  scroll-behavior: smooth;
+
+  @media (max-width: 1080px) {
+    font-size: 93.75%;
+  }
+
+  @media (max-width: 728px) {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  font-family: var(--body-font);
+  font-weight: var(--light);
+  -webkit-font-smoothing: antialiased;
+  color: var(--text);
+  background-color: var(--body-bg);
+  background-image: var(--body-img);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+i {
+  cursor: pointer;
+}
+
+button {
+  font-weight: var(--black);
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+
+/*============== Particle BG ============== */
+
+#particles-js {
+  height: 100%;
+  position: fixed;
+  filter: var(--invert-color-particles);
+}
+
+/*============== Header ============== */
+
+.header-container {
+  width: 100%;
+  position: fixed;
+  background-color: var(--form-bg);
+  z-index: 5;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 4.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0rem 1rem;
+}
+
+.header-content img {
+  width: 50px;
+  transition: 0.2 all ease;
+  filter: var(
+    --logo-black
+  ); /* turn the logo black only when light mode is activated */
+}
+
+.header-content img:active {
+  opacity: 0.8;
+}
+
+.fa-header {
+  color: #c3c3c3;
+  font-size: 1.5rem;
+
+  transition: 0.2s all ease;
+}
+
+.fa-header:hover {
+  color: #fff;
+}
+
+/*============== Main Container ============== */
+.main-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/*============== Form ============== */
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+  width: 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 3.5rem 3.5rem;
+  gap: 1rem;
+  border: 1px solid var(--form-border);
+  border-radius: 1rem;
+  background-color: var(--form-bg);
+  backdrop-filter: var(--form-bg-blur)
+}
+
+.form-control span {
+  color: var(--text);
+  font-weight: var(--medium);
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #8787873b;
+  padding: 1.3rem 2.5rem;
+  background-color: transparent;
+  color: var(--button);
+  font-size: 0.9rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  transition: 0.2s all ease;
+}
+
+.form-input::placeholder {
+  color: var(--placeholder);
+}
+
+.form-input:focus {
+  outline: none;
+  border-bottom-color: var(--blue);
+}
+
+.input-container .form-input:valid ~ i,
+.input-container .form-input:focus ~ i {
+  color: var(--blue);
+}
+
+.fa-input {
+  position: absolute;
+  padding-left: 0.75rem;
+
+  transition: 0.5s all ease;
+}
+
+.form-btn {
+  height: 3.5rem;
+  margin-top: 2rem;
+  background-color: var(--blue);
+  color: #fff;
+
+  transition: 0.2s all ease;
+}
+
+.form-btn:hover {
+  opacity: 0.9;
+}
+
+.form-btn:active {
+  opacity: 0.8;
+}
+
+.span-required {
+  display: none;
+  margin-top: 0.25rem;
+  font-size: 14px;
+  color: var(--input-error);
+}
+
+/*============== Footer ============== */
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+.fa-heart {
+  color: var(--icons);
+  transition: 0.2s all ease;
+}
+
+.fa-heart:hover {
+  color: rgb(255, 49, 49);
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.fa-social-media {
+  color: var(--icons);
+  font-size: 1.5rem;
+  transition: 0.3s all ease;
+}
+
+.fa-social-media:hover {
+  color: var(--icons-hover);
+  transform: translateY(-0.25rem);
+}
+
+/*============== Toggle switch Light/Dark mode ============== */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.fa-sun {
+  position: absolute;
+  bottom: 9px;
+  right: 10px;
+  color: var(--switch-icons);
+  z-indez: 1;
+}
+
+.fa-moon {
+  position: absolute;
+  bottom: 9px;
+  left: 10px;
+  color: var(--switch-icons);
+  z-indez: 1;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--switch-bg);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(32px);
+  -ms-transform: translateX(32px);
+  transform: translateX(32px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+  background-color: var(--switch-round);
+  z-index: 1;
+}
+
+/*============== Scrollbar ============== */
+
+::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-bg);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue);
+  border-radius: 0.5rem;
+}
+
+/*============== Success/Error Modal ============== */
+
+.modal-container {
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.15s;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--modal-bg);
+  border: 1px solid var(--form-border);
+  width: 600px;
+  padding: 2rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 #00000038;
+  overflow: hidden;
+
+  transition: width 0.15s, height 0.15s;
+}
+
+.modal h1 {
+  font-size: 2.3rem;
+}
+
+.modal p {
+  color: var(--description);
+  font-size: 1.1rem;
+  font-weight: var(--regular);
+}
+
+.modal-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-btn {
+  height: 3.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  background-color: #2e2e2e;
+  color: #fff;
+
+  transition: 0.2s all ease;
+}
+
+.modal-btn:hover {
+  opacity: 0.9;
+}
+
+.modal-btn:active {
+  opacity: 0.8;
+}
+
+/* Lottie success icon */
+.lottie-success {
+  width: 170px;
+  pointer-events: none;
+}
+
+/*============== Responsive Breakpoints ============== */
+
+/*============== Tablet ============== */
+
+@media (max-width: 768px) {
+}
+
+/*============== Mobile ============== */
+
+@media (max-width: 460px) {
+}
