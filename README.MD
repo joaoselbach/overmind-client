@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Overmind" title="Overmind" src=".github/logo.png" />
+    <img alt="Overmind" size={100} title="Overmind" src=".github/logo.png" />
 </h1>
 
 <p align="center">
