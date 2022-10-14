@@ -16,7 +16,6 @@ const animItem = bodymovin.loadAnimation({
     path: 'assets/success.json'
 });
 
-
 const openModal = () => {
     container.classList.add(activeModalClass);
     animItem.goToAndPlay(0, true);

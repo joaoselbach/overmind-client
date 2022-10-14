@@ -1,6 +1,5 @@
 /*============== Dark mode ============== */
 :root {
-
   /*============== Max width ============== */
   --max-width: 1060px;
 
@@ -39,7 +38,6 @@
 
 /*============== Light mode ============== */
 .light-mode:root {
-
   /*============== Max width ============== */
   --max-width: 1060px;
 
@@ -307,7 +305,6 @@ button {
   transition: 0.2s all ease;
 }
 
-
 .fa-youtube:hover,
 .fa-heart:hover {
   color: #ff3131;
@@ -333,7 +330,6 @@ button {
 .fa-linkedin:hover {
   color: #1e7ad5;
 }
-
 
 /*============== Toggle switch Light/Dark mode ============== */
 
@@ -378,7 +374,7 @@ button {
   bottom: 0;
   background-color: var(--switch-bg);
   -webkit-transition: 0.4s all ease;
-  transition: 0.4s all ease;;
+  transition: 0.4s all ease;
 }
 
 .slider:before {
@@ -390,8 +386,8 @@ button {
   bottom: 4px;
   background-color: white;
 
-  -webkit-transition: 0.4s all ease;;
-  transition: 0.4s all ease;;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
 }
 
 input:checked + .slider:before {
